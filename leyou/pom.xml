@@ -11,6 +11,8 @@
         <module>ly-api-gateway</module>
         <module>ly-item</module>
         <module>ly-common</module>
+        <module>ly-search</module>
+        <module>ly-goods-page</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -34,6 +36,8 @@
         <pageHelper.starter.version>1.2.3</pageHelper.starter.version>
         <leyou.latest.version>1.0.0-SNAPSHOT</leyou.latest.version>
         <fastDFS.client.version>1.26.1-RELEASE</fastDFS.client.version>
+        <lombok.latest.version>1.18.22</lombok.latest.version>
+        <jackson.version>2.13.1</jackson.version>
     </properties>
 
     <dependencyManagement>
@@ -76,17 +80,32 @@
                 <artifactId>fastdfs-client</artifactId>
                 <version>${fastDFS.client.version}</version>
             </dependency>
+            <!--lombok-->
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
+            </dependency>
+            <!--jackson-->
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-databind</artifactId>
+                <version>${jackson.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-core</artifactId>
+                <version>${jackson.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-annotations</artifactId>
+                <version>${jackson.version}</version>
+            </dependency>
         </dependencies>
-    </dependencyManagement>
 
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-        </plugins>
-    </build>
+
+    </dependencyManagement>
 
     <repositories>
         <repository>
